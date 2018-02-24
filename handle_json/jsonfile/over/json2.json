@@ -1,0 +1,117 @@
+{
+    "luis_schema_version": "2.1.0",
+    "versionId": "0.1",
+    "name": "Service_identifier",
+    "desc": "identify different needs and requests",
+    "culture": "zh-cn",
+    "intents": [
+        {
+            "name": "activities"
+        },
+        {
+            "name": "airline_ticket"
+        },
+        {
+            "name": "bodycare"
+        },
+        {
+            "name": "book_hotel"
+        },
+        {
+            "name": "car_service"
+        },
+        {
+            "name": "cardissue"
+        },
+        {
+            "name": "cash"
+        },
+        {
+            "name": "documents"
+        },
+        {
+            "name": "education"
+        },
+        {
+            "name": "event planing"
+        },
+        {
+            "name": "food take-away"
+        },
+        {
+            "name": "gift"
+        },
+        {
+            "name": "greeting"
+        },
+        {
+            "name": "infomation"
+        },
+        {
+            "name": "internet"
+        },
+        {
+            "name": "medical"
+        },
+        {
+            "name": "None"
+        },
+        {
+            "name": "ondemand service"
+        },
+        {
+            "name": "parking"
+        },
+        {
+            "name": "petcare"
+        },
+        {
+            "name": "POI"
+        },
+        {
+            "name": "reserve_restaurant"
+        },
+        {
+            "name": "shopping"
+        },
+        {
+            "name": "vacation plan"
+        },
+        {
+            "name": "workout"
+        }
+    ],
+    "entities": [],
+    "composites": [],
+    "closedLists": [],
+    "bing_entities": [],
+    "model_features": [],
+    "regex_features": [],
+    "utterances": [
+        {
+            "text": "哈哈",
+            "intent": "None",
+            "entities": []
+        },
+        {
+            "text": "test",
+            "intent": "None",
+            "entities": []
+        },
+        {
+            "text": "测试",
+            "intent": "None",
+            "entities": []
+        },
+        {
+            "text": "test2",
+            "intent": "None",
+            "entities": []
+        },
+        {
+            "text": "测试2",
+            "intent": "None",
+            "entities": []
+        }
+    ]
+}
