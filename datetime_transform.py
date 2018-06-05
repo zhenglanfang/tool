@@ -12,22 +12,28 @@ from datetime import timedelta
 
 class DatetimeTransfrom(object):
     """docstring for DatetimeTransfrom"""
-    fmt = "%Y-%m-%d %H:%M:%S"
+    format = "%Y-%m-%d %H:%M:%S"
     
     def __init__(self):
         super(DatetimeTransfrom, self).__init__()
 
     @staticmethod
-    def str_to_datetime(string, fmt=fmt):
-        return datetime.strptime(string,fmt)
+    def str_to_datetime(string, format=format):
+        return datetime.strptime(string, format)
 
     @staticmethod
-    def str_to_timestamp(string, fmt=fmt):
-        return time.mktime(time.strptime(string, fmt))
+    def str_to_date(string, format=format):
+        return datetime.strptime(string, format).date()
+        # date_str = '2017-10-19'
+        # print(datetime.date(*map(int, date_str.split('-'))))
 
     @staticmethod
-    def datetime_to_str(dt, fmt=fmt):
-        return dt.strftime(fmt)
+    def str_to_timestamp(string, format=format):
+        return time.mktime(time.strptime(string, format))
+
+    @staticmethod
+    def datetime_to_str(dt, format=format):
+        return dt.strftime(format)
 
     @staticmethod
     def datetime_to_timestamp(dt):
@@ -40,26 +46,26 @@ class DatetimeTransfrom(object):
         return datetime.utcfromtimestamp(timestamp)
 
     @classmethod
-    def timestamp_to_str(cls, timestamp, fmt=fmt):
+    def timestamp_to_str(cls, timestamp, format=format):
         dt = datetime.fromtimestamp(timestamp)
-        return cls.datetime_to_str(dt, fmt)
+        return cls.datetime_to_str(dt, format)
 
     @staticmethod
     def timestramp_to_datetime(timestamp):
         return datetime.fromtimestamp(timestamp)
 
     @classmethod
-    def utcstr_to_timestamp(cls, dt_str, tz_str, fmt=fmt):
+    def utcstr_to_timestamp(cls, dt_str, tz_str, format=format):
         '''
         python3
         将日期str和时区str转换为timestamp
         :param dt_str:日期  2015-1-21 9:01:30
         :param tz_str:时区  UTC+5:00
-        :param fmt:日期的格式
+        :param format:日期的格式
         :return:timestamp
         '''
         # 将字符串日期转换为datetime
-        dt_str = datetime.strptime(dt_str, fmt)
+        dt_str = datetime.strptime(dt_str, format)
 
         # 正则获取需要加减的时区信息(+7,-9)
         tz_str = re.match(r'UTC([+-]\d+):00', tz_str).group(1)
